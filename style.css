@@ -1,0 +1,66 @@
+/**
+ * Copyright 2021 sfchi
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+ 
+
+ *{
+    box-sizing: border-box;
+}
+
+ body {
+     font-family: 'Roboto', sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     margin: 0;
+     background-color: rgb(32, 32, 32);
+ }
+
+ button {
+     background-color: paleturquoise;
+     color: rgb(149, 0, 248);
+     border: 1px solid paleturquoise;
+     font-size: 0.8rem;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     padding: 20px 30px;
+     overflow: hidden;
+     margin: 10px 0;
+     position: relative;
+ }
+
+ button:focus {
+     outline: none;
+ }
+
+ button .circle {
+     position: absolute;
+     background-color: #fff;
+     width: 100px;
+     height: 100px;
+     border-radius: 50px;
+     transform: translate(-50%, -50%) scale(0);
+     animation: scale .5s ease-out;
+ }
+
+ @keyframes scale {
+     to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+     }
+ }
